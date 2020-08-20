@@ -54,7 +54,7 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 #content {
   padding: 2px;
   a {
@@ -66,5 +66,13 @@ export default Vue.extend({
   .uk-lightbox-button {
     background: #00000000 !important;
   }
+}
+
+footer .uk-card-default {
+  margin: 30px;
+}
+
+header .uk-card-default {
+  margin: 30px;
 }
 </style>

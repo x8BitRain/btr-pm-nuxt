@@ -91,12 +91,8 @@ export default {
 <style scoped>
 /*footer*/
 
-footer .uk-card-default {
-  margin: 35px;
-}
-
 footer .uk-card-body {
-  margin: 30px;
+  margin-bottom: 30px;
 }
 
 #foot > a {

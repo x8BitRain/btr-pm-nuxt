@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="projects">
     <Header />
     <main>
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-animation-fade" uk-grid>
@@ -188,6 +188,53 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+#projects {
+  margin: 0 10% !important;
+}
 
+.fun-canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+#header .uk-card-body {
+  padding-top:20px;
+  padding-bottom:20px;
+  margin:15px;
+  text-align:left;
+}
+
+.uk-card-body {
+  margin:15px 0px 15px 0px !important;
+}
+
+
+.uk-card-default {
+  background: #fdfdfd;
+}
+
+.uk-label {
+  transform: scale(0.75);
+}
+
+.label-react {
+  background-color:#09d2ac !important;
+}
+
+.label-rails {
+  background-color:#c00 !important;
+}
+
+.label-js {
+  background-color:#f0db4f !important;
+}
+
+.label-htmlcss {
+  background-color:#264de4 !important;
+}
 </style>

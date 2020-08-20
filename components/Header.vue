@@ -32,6 +32,7 @@ export default {
 #header .uk-card-body {
   padding-top: 20px;
   padding-bottom: 20px;
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 </style>
