@@ -1,0 +1,17 @@
+{
+  "title": "btr.pm",
+  "label": "Vue/Nuxt",
+  "labelColor": "#47b984",
+  "body": "The website you're on now! Built from scratch using UIKit, VueJS components in NuxtJS, also an experiment in image compression and content delivery optimization. I have a writeup on how I built it originally in plain HTML/CSS on the blog section of the website.",
+  "links": [
+    {
+      "link": "https://btr.pm/",
+      "linkText": "btr.pm/"
+    },
+    {
+      "link": "https://btr.pm/blog/building-a-website-from-scratch/",
+      "linkText": "Writeup"
+    }
+  ],
+  "image": "btrpm.jpg"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Ticket2Calendar",
+  "label": "React/XZingJS",
+  "labelColor": "#61dbfb",
+  "body": "A fully clientside boarding pass scanner in your browser. Built in React, using a web assembly build of the barcode scanning library xzing. Take any boarding pass with a PDF-417 or Aztec barcode and scan it to view your flight itinerary and add it to any popular online calendar. Only works on stable Chrome unfortunately",
+  "links": [
+    {
+      "link": "https://x8bitrain.github.io/ticket2calendar/",
+      "linkText": "ticket2calendar"
+    },
+    {
+      "link": "https://github.com/x8BitRain/ticket2calendar",
+      "linkText": "Github"
+    }
+  ],
+  "image": "ticket2calendar.jpg"
+}

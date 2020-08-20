@@ -1,0 +1,13 @@
+{
+  "title": "Rumreggae-Bali.net",
+  "label": "HTML/CSS/WP",
+  "labelColor": "#264de4",
+  "body": "The website and bio of Rum Reggae Indonesia, a traditional batik shirt company. Designed and themed around photos of their factory and products. Also an experiment in staticizing WordPress pages, hosted on GitHub pages.\n\n",
+  "links": [
+    {
+      "link": "https://rumreggae-bali.net/",
+      "linkText": "rumreggae-bali.net"
+    }
+  ],
+  "image": "rumreggae.jpg"
+}

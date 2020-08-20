@@ -1,0 +1,17 @@
+{
+  "title": "CitySize",
+  "label": "React",
+  "labelColor": "#61dbfb",
+  "body": "A progressive web app and interactive map built with leaflet in React that lets you accurately compare geographic features like countries, cities, states and even buildings. Inspired by thetruesizeof.com and powered by nominatim.openstreetmap.org GeoJSON data.",
+  "links": [
+    {
+      "link": "https://x8bitrain.github.io/citysize/",
+      "linkText": "CitySize"
+    },
+    {
+      "link": "https://github.com/x8BitRain/citysize",
+      "linkText": "Github"
+    }
+  ],
+  "image": "citysize.jpg"
+}

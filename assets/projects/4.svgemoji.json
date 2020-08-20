@@ -1,0 +1,17 @@
+{
+  "title": "SVG/Emoji Corrupt",
+  "label": "React",
+  "labelColor": "#61dbfb",
+  "body": "An experiment in SVG manipulation built in React. The app takes an inline SVG, reads the d=\"\" paths and replaces the targeted numbers with the numbers you set in the control panel. All the emojis in the menu are SVGs loaded from the Twemoji CDN.",
+  "links": [
+    {
+      "link": "https://x8bitrain.github.io/svg-emoji-corrupt/",
+      "linkText": "SVG/Emoji Corrupt"
+    },
+    {
+      "link": "https://github.com/x8BitRain/svg-emoji-corrupt",
+      "linkText": "Github"
+    }
+  ],
+  "image": "svgemoji.webm"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Corrupt.wiki",
+  "label": "Gitbook",
+  "labelColor": "#264de4",
+  "body": "An open source wiki running GitBook where documentation on the art of corrupting video games is available.\n\n",
+  "links": [
+    {
+      "link": "https://corrupt.wiki/",
+      "linkText": "corrupt.wiki"
+    },
+    {
+      "link": "https://github.com/x8BitRain/corruption-wiki-media",
+      "linkText": "Github backend"
+    }
+  ],
+  "image": "corruptwiki.jpg"
+}

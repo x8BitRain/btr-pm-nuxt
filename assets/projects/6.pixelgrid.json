@@ -1,0 +1,13 @@
+{
+  "title": "thepixelgrid.org",
+  "label": "Gitbook",
+  "labelColor": "#c00",
+  "body": "Built in collaboration with Max Synnott pixelGrid is a realtime collaborative online canvas anyone can draw pixels on for charity, inspired by Reddit's /r/place experiment. The pixel placements update in real time so you can draw with others! The app is a fixed height HTML5 canvas built on Rails, uses websockets for real time pixel placement updates, sidekiq for queued database updates and UIKit for the frontend.\n\n",
+  "links": [
+    {
+      "link": "https://github.com/maxsynnott/pixel_grid",
+      "linkText": "Github"
+    }
+  ],
+  "image": "pixelgrid.jpg"
+}

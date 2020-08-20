@@ -1,0 +1,17 @@
+{
+  "title": "SVG2PNG",
+  "label": "React",
+  "labelColor": "#61dbfb",
+  "body": "A small set of tools for exporting SVGs to scaled PNGs and data URIs wrapped into a simple web UI written in React.",
+  "links": [
+    {
+      "link": "https://x8bitrain.github.io/svg2png/",
+      "linkText": "svg2png"
+    },
+    {
+      "link": "hhttps://github.com/x8BitRain/svg2png",
+      "linkText": "Github"
+    }
+  ],
+  "image": "svg2png.jpg"
+}
