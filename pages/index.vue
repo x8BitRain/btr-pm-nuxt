@@ -68,11 +68,11 @@ export default Vue.extend({
   }
 }
 
-footer .uk-card-default {
+#footer {
   margin: 30px;
 }
 
-header .uk-card-default {
+#header {
   margin: 30px;
 }
 </style>

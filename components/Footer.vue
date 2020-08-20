@@ -1,7 +1,7 @@
 <template>
-  <footer>
+  <footer id="footer">
     <div class="uk-card uk-card-default uk-card-body">
-      <div id="foot" class="uk-margin-small-right">
+      <div class="uk-margin-small-right">
         <a
           href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;"
           ><img
@@ -91,11 +91,11 @@ export default {
 <style scoped>
 /*footer*/
 
-footer .uk-card-body {
+#footer .uk-card-body {
   margin-bottom: 30px;
 }
 
-#foot > a {
+#footer a {
   margin-right: 15px !important;
   padding: 10px;
 }
