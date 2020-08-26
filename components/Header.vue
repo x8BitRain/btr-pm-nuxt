@@ -11,10 +11,10 @@
             src="~/assets/img/icons/btr.svg"
             alt="btr.pm"
         /></a>
-        <a href="/"><button class="u">Photos</button></a>
-        <nuxt-link to="/projects"><button>Projects</button></nuxt-link>
-        <nuxt-link to="/"><button>Blog</button></nuxt-link>
-        <nuxt-link to="/"><button>Contact</button></nuxt-link>
+        <nuxt-link to="/"><button :class="activeLink('/')">Photos</button></nuxt-link>
+        <nuxt-link to="/projects"><button :class="activeLink('/projects')">Projects</button></nuxt-link>
+        <nuxt-link to="/blog"><button :class="activeLink('/blog')">Blog</button></nuxt-link>
+        <nuxt-link to="/"><button :class="activeLink('/contact')">Contact</button></nuxt-link>
       </div>
     </div>
   </nav>
@@ -23,6 +23,13 @@
 <script>
 export default {
   name: 'Header',
+  methods: {
+    activeLink(linkName) {
+      if (this.$route.path === linkName) {
+        return 'u'
+      }
+    },
+  },
 }
 </script>
 

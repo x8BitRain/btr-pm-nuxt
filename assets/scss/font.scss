@@ -8,6 +8,15 @@
   url('~assets/fonts/b612-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-html, body, h3 {
+html, body, h1, h3, h6, h5 {
   font-family: 'B612', sans-serif;
+}
+
+h5 {
+  margin: 20px 0 20px 0;
+}
+
+h6 {
+  margin: 20px 0 30px 0;
+  text-align: center;
 }
