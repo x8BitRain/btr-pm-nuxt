@@ -4,7 +4,7 @@
       class="uk-card uk-card-default uk-card-body uk-light uk-animation-fade"
     >
       <div class="uk-inline">
-        <a id="l" href="https://btr.pm"
+        <a id="l" href="/"
           ><img
             width="250"
             height="10"
@@ -14,7 +14,7 @@
         <nuxt-link to="/"><button :class="activeLink('/')">Photos</button></nuxt-link>
         <nuxt-link to="/projects"><button :class="activeLink('/projects')">Projects</button></nuxt-link>
         <nuxt-link to="/blog"><button :class="activeLink('/blog')">Blog</button></nuxt-link>
-        <nuxt-link to="/"><button :class="activeLink('/contact')">Contact</button></nuxt-link>
+        <nuxt-link to="/contact"><button :class="activeLink('/contact')">Contact</button></nuxt-link>
       </div>
     </div>
   </nav>
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-@import 'assets/scss/components/button.css';
+@import '../assets/scss/components/button.scss';
 
 #header .uk-card-body {
   padding-top: 20px;

@@ -14,6 +14,7 @@
       />
       <video
         v-if="image.match(/mp4/)"
+        loading="lazy"
         autoplay
         muted
         loop
@@ -42,7 +43,7 @@
         </NuxtLink>
         <p>{{ description }}</p>
         <div>
-          <h6 class="blog-date">{{ formatDate(date) }}</h6>
+          <h5 class="blog-date">{{ formatDate(date) }}</h5>
           <NuxtLink :to="'/blog/' + link">READ ME</NuxtLink>
         </div>
       </div>

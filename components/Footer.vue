@@ -3,7 +3,7 @@
     <div class="uk-card uk-card-default uk-card-body">
       <div class="uk-margin-small-right">
         <a
-          href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;"
+          href="#"
           ><img
             id="emailid"
             src="~/assets/img/icons/mail.svg"

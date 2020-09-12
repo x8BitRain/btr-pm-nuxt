@@ -2,18 +2,18 @@
 title: Building and optimizing a static website from scratch.
 description: An adventure in static pages, layouts, web frameworks, image compression and load times. How I built the site you're on right now.
 img: preview.jpg
-alt: my first blog post
+alt: Building and optimizing a static website from scratch.
 author: Dashiell Bell
 ---
-
-21 February 2019
 
 Building and optimizing a static website from scratch.
 ======================================================
 
+##### February 2019
+
 An adventure in static pages, layouts, web frameworks, image compression and load times.
 
-![](../content/images/2019/02/static-2.webp)
+<blog-img src="1.jpg"></blog-img>
 
 I used to host my website on Squarespace, a WYSIWYG website builder and CMS you often see promoted by just about every YouTube channel there is.
 
@@ -42,7 +42,7 @@ Seeing as this project is going to be built in HTML, CSS and JS, I'm not going t
 
 There are several hosting services that exist exclusively for static pages, some of the more popular ones include [GitHub Pages](https://pages.github.com/), [Netlify](https://www.netlify.com/) and even Azure. I decided to use [Google Firebase](https://firebase.google.com/) because it's really simple to use as it's free provided I don't use over 10GB of bandwidth per month...
 
-![](../content/images/2019/02/image.webp)
+<blog-img src="2.jpg"></blog-img>
 
 That's kind of an issue considering the images I plan on hosting are about 10.1 MB of images on the home page alone and 40 MB of full resolution. So if 10,000 people were to visit the site in a month I'd run out of my free usage.
 
@@ -57,7 +57,7 @@ I decided against building every element of the website from scratch as I'm not 
 
 I really like the minimalist look and ease of use that [UIKit](https://getuikit.com) offers, it has dozens of components with several parameters, icons and great documentation to go with it.
 
-![](../content/images/2019/02/image-4.webp)
+<blog-img src="4.jpg"></blog-img>
 
 [https://getuikit.com/docs/card](https://getuikit.com/docs/card)
 
@@ -74,21 +74,21 @@ This is easier said than done, basically I'm looking for a Google Photos impleme
 
 I also found this post by [xieranmaya](https://github.com/xieranmaya/blog/issues/6) detailing his "pure CSS" implementation of Google Photos' layout. Only problem is it relies on AngularJS to do the needed math to scale the images properly.
 
-![](../content/images/2019/02/image-6.webp)
+<blog-img src="6.jpg"></blog-img>
 
 Yeah you can't do that with CSS alone :/
 
 I was considering rewriting this in regular Javascript to avoid having to import more JS libraries that only get used for one specific thing when I realized UIKit already has a grid component I can potentially use.
 
-![](../content/images/2019/02/image-9.webp)
+<blog-img src="9.jpg"></blog-img>
 
 A cool feature of UIKit's grid component is that you can enable a masonry layout just by adding the "masonry: true" attribute to the grid's div, damn, that was easy. Now all I have to do is insert images in the place of the cards they have in the example and I now have a gallery that ticks all the boxes.
 
-![](../content/images/2019/02/image-10.webp)
+<blog-img src="10.jpg"></blog-img>
 
 Enabling the lightbox is just as easy, I just had to insert "uk-lightbox" into the div that contains the images and it will bring up an image lightbox provided the images are wrapped in an <a href> referencing the image you want the lightbox to display.
 
-![](../content/images/2019/02/image-11.webp)
+<blog-img src="11.jpg"></blog-img>
 
 A single div with a few parameters gives you a great image gallery. 
 
@@ -98,17 +98,17 @@ Because I'm trying to optimize the website for speed, having 100 high res images
 
 I created two sets of the same image gallery, one set of the gallery is scaled down and compressed thumbnail images for use on the homepage, about 1200x800. The other set is high resolution optimized images for use in the lightbox, about 2000x1300. I'm using 1200x800 thumbnails because when you scale down a large image to a smaller size, it still looks quite sharp. So if I compress 1200x800 images that don't look amazingly clear when viewed in full and display them at 500x300, they look decently sharp.
 
-![](../content/images/2019/02/image-13.webp)
+<blog-img src="13.jpg"></blog-img>
 
 I experimented with MozJPG and compressing the images with the MS-SSIM compression algorithm and got pretty amazing results. 13.81% of the original image's size with almost no detectable difference.
 
-![](../content/images/2019/02/image-15.webp)
+<blog-img src="15.jpg"></blog-img>
 
 Left: Un-optimized - Right: Optimized
 
 Then I thought I'd try WebP because it's basically built for exactly what I'm trying to do, optimize images for the web, conserve bandwidth and retain quality. The results I got from compressing with WebP are pretty crazy.
 
-![](../content/images/2019/02/image-17.webp)
+<blog-img src="17.jpg"></blog-img>
 
 Left: Optimized JPG - Right: WebP
 
@@ -126,11 +126,11 @@ As great as WebP seems, there are still some browsers that just don't support it
 
 Despite the images being optimized so well it still leads to 10 MB loaded every time you load the homepage. Fortunately UIKit paired with the latest browsers should lazy load the images, meaning once you scroll into the view of the image it will start to load, instead of all at the same time. That means we the page only loads about 1MB of images in the initial viewport. This doesn't happen on all browsers unfortunately.
 
-![](../content/images/2019/02/image-18.webp)
+<blog-img src="18.jpg"></blog-img>
 
 When clicking on an image it will load the higher resolution version of the image for better viewing, this is doable by wrapping the image in the gallery with an <a href> pointing to the location of the larger image you want to display in UIKit's lightbox.
 
-![](../content/images/2019/02/image-19.webp)
+<blog-img src="19.jpg"></blog-img>
 
 The img/ folder is where the larger images are stored while "img-s/" is where the thumbnails are stored.
 
@@ -141,7 +141,7 @@ Page Speed
 
 I made use of CloudFlare to further optimize the load times of the website, CloudFlare has great features for free users, the ones I use are the Caching features to set the browser cache expiration time to 2 days. The Auto Minify function to cut down the size of the HTML, stylesheets and JavaScript files in use on the site.
 
-![](../content/images/2019/02/image-20.webp)
+<blog-img src="20.jpg"></blog-img>
 
 I also used their domain forwarding page rule to forward www. to the root domain and to ensure SSL is always in use.
 
@@ -149,21 +149,21 @@ I also used their domain forwarding page rule to forward www. to the root domain
 
 On the site I'm using a pretty obscure font called [B612](https://b612-font.com/), it's a font commissioned by Airbus and made by Intactile Design that aims to improve legibility of text on cockpit screens. I think it looks really cool and adds a unique style to the site. I experimented with hosting the fonts on the server rather than requesting the font through Google Fonts.
 
-![](../content/images/2019/02/local-fonts.webp)
+<blog-img src="21.png"></blog-img>
 
 Hosting the fonts on the server.
 
-![](../content/images/2019/02/goog-fonts.webp)
+<blog-img src="22.jpg"></blog-img>
 
 Importing from Google Fonts.
 
 That's a 3.6 second difference. This is because Google Fonts will intelligently serve only the fonts needed rather than every variation of the font, meant also meant that the CSS for loading the font went from this:
 
-![](../content/images/2019/02/font-css.webp)
+<blog-img src="23.png"></blog-img>
 
 To this:
 
-![](../content/images/2019/02/googf-css.webp)
+<blog-img src="24.png"></blog-img>
 
 ### Small Optimizations.
 
@@ -180,33 +180,27 @@ UIKit comes with a JS library that contains a few dozen SVG icons you can use an
 
 Annoyingly, most of UIKit's CSS and JS libraries go unused as I only include 4 components on the home page. I could shave a lot of KBs off the load time if I were to pick out only the parts of the CSS and JS that are in use but the convenience of the CDN embedding the latest UIKit libraries outweighs the shorter load time of having less CSS/JS.
 
-![](../content/images/2019/02/image-22.webp)
+<blog-img src="25.jpg"></blog-img>
 
 Results
 -------
 
 The finished product is a pretty quick site with a PageSpeed Insights score of 96 on mobile and 100 on desktop, of course it's not the fastest it can be but I'm pretty happy with the results.
 
-![](../content/images/2019/02/image-24.webp)
+<blog-img src="26.jpg"></blog-img>
 
-![](../content/images/2019/02/image-25.webp)
+<blog-img src="27.jpg"></blog-img>
 
 Comparing load times to the old Squarespace site I had with more or less the same layout as the site I built:
 
-![](../content/images/2019/02/image-26.webp)
+<blog-img src="28.jpg"></blog-img>
 
 Squarespace site
 
-![](../content/images/2019/02/image-27.webp)
+<blog-img src="29.jpg"></blog-img>
 
 Static site
 
 It's a hell of a lot quicker.
 
- ![](/blog/content/images/pfp.jpg) 
-
-#### [Dash Bell](/blog)
-
-Read [more posts](/blog) by this author.
-
-Share this
+**_UPDATE_**: I remade this site in NuxtJS recently so what you're seeing here isn't build from scratch anymore like the article suggests.
