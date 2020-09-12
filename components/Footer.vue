@@ -2,9 +2,8 @@
   <footer id="footer">
     <div class="uk-card uk-card-default uk-card-body">
       <div class="uk-margin-small-right">
-        <a
-          href="#"
-          ><img
+        <a>
+          <img
             id="emailid"
             src="~/assets/img/icons/mail.svg"
             alt="Contact Via Email"
@@ -42,10 +41,7 @@
                 <img
                   src="~/assets/img/icons/mail.svg"
                   alt="Send Email in Client or App"
-                /><a
-                  href="mailto:&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;"
-                  >Send in Client/App</a
-                >
+                /><a :href="'mailto:' + email">Send in Client/App</a>
               </div>
             </li>
             <li>
@@ -53,13 +49,14 @@
                 <img
                   src="~/assets/img/icons/copy.svg"
                   alt="Copy Email Address"
-                /><a href="#email" onClick="copyEmail()">Copy</a>
+                /><a @click="copyEmail">Copy</a>
                 <input
+                  ref="emailInput"
                   id="email"
                   style="width: 9.5em;"
                   class="uk-input"
                   type="text"
-                  value="&#100;&#98;&#101;&#108;&#108;&#64;&#98;&#116;&#114;&#46;&#112;&#109;"
+                  :value="email"
                 />
               </div>
             </li>
@@ -85,11 +82,23 @@
 <script>
 export default {
   name: 'Footer',
+  computed: {
+    email() {
+      return 'dbell@btr.pm'
+    },
+  },
+  methods: {
+    copyEmail() {
+      this.$refs.emailInput.select()
+      document.execCommand('copy')
+      this.$refs.emailInput.style.outline = '1px solid green'
+      this.$refs.emailInput.blur()
+    },
+  },
 }
 </script>
 
 <style scoped>
-/*footer*/
 
 #footer .uk-card-body {
   margin-bottom: 30px;
@@ -117,5 +126,9 @@ export default {
 
 #mailto .uk-inline > a:nth-child(1) {
   background-color: #fff;
+}
+
+#email {
+  transition: outline 350ms ease;
 }
 </style>
