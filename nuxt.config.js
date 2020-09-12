@@ -41,7 +41,7 @@ export default {
   css: ['assets/scss/uikit.css', 'assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
-   ** https://nuxtjs.org/guide/plugins
+   ** https://nu Fxtjs.org/guide/plugins
    */
   plugins: [
     { src: '~/plugins/uikit.js', ssr: false },
