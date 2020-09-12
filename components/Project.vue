@@ -1,27 +1,29 @@
 <template>
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-grids" uk-grid>
     <div :class="innerClass">
-      <img
-        v-if="image.match(/jpg|jpeg|webp/)"
-        :src="require('@/assets/img/projects/' + image)"
-        loading="lazy"
-        class="lazyload"
-        :alt="title"
-        uk-cover
-      />
-      <video
-        v-if="image.match(/mp4/)"
-        autoplay
-        muted
-        loop
-        class="project-video"
-      >
-        <source
+      <transition name="fade" mode="out-in">
+        <img
+          v-if="image.match(/jpg|jpeg|webp/)"
           :src="require('@/assets/img/projects/' + image)"
-          type="video/mp4"
+          loading="lazy"
           class="lazyload"
+          :alt="title"
+          uk-cover
         />
-      </video>
+        <video
+          v-if="image.match(/mp4/)"
+          autoplay
+          muted
+          loop
+          class="project-video"
+        >
+          <source
+            :src="require('@/assets/img/projects/' + image)"
+            type="video/mp4"
+            class="lazyload"
+          />
+        </video>
+      </transition>
       <canvas width="600" height="400"></canvas>
     </div>
     <div>

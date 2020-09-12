@@ -55,12 +55,4 @@ html {
   background-color: #35495e;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 250ms;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
 </style>

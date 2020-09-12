@@ -1,2 +1,11 @@
 @import url('./font.scss');
 @import url('./components/button.scss');
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 250ms;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

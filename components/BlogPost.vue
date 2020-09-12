@@ -4,28 +4,30 @@
     uk-grid
   >
     <div :class="innerClass">
-      <img
-        v-if="image.match(/jpg|jpeg|webp|png/)"
-        :src="require('@/assets/img/blog/' + link + '/' + image)"
-        loading="lazy"
-        class="uk-cover lazyload"
-        :alt="title"
-        uk-cover
-      />
-      <video
-        v-if="image.match(/mp4/)"
-        loading="lazy"
-        autoplay
-        muted
-        loop
-        class="project-video"
-      >
-        <source
-          :src="require('@/assets/img/projects/' + image)"
-          type="video/mp4"
-          class="lazyload"
+      <transition name="fade" mode="out-in">
+        <img
+          v-if="image.match(/jpg|jpeg|webp|png/)"
+          :src="require('@/assets/img/blog/' + link + '/' + image)"
+          loading="lazy"
+          class="uk-cover lazyload"
+          :alt="title"
+          uk-cover
         />
-      </video>
+        <video
+          v-if="image.match(/mp4/)"
+          loading="lazy"
+          autoplay
+          muted
+          loop
+          class="project-video"
+        >
+          <source
+            :src="require('@/assets/img/projects/' + image)"
+            type="video/mp4"
+            class="lazyload"
+          />
+        </video>
+      </transition>
       <canvas width="600" height="400"></canvas>
     </div>
     <div>
