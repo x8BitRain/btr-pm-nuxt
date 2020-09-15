@@ -1,0 +1,6 @@
+.uk-totop {
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transform:scale(2);
+}

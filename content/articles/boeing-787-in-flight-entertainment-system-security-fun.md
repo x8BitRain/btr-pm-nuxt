@@ -3,6 +3,7 @@ title: Boeing 787 In Flight Entertainment System Security fun!
 description: Digging into the security on the newer IFEs found on the Boeing 787 Dreamliner.
 img: preview.png
 alt: Boeing 787 In Flight Entertainment System Security fun!
+label: NETSEC
 author: Dashiell Bell
 ---
 

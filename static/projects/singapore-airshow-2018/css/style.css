@@ -1,0 +1,10 @@
+@import url(button.css);
+@import url(navbar.css);
+@import url(footer.css);
+@import url(gallery.css);
+@import url(totop.css);
+
+/*no footer for first 3 seconds*/
+footer {
+    display: none;
+}

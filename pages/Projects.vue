@@ -20,6 +20,7 @@
 
 <script>
 import Footer from '@/components/Footer'
+import metaTags from '@/utils/metaTags.js'
 export default {
   name: 'Projects',
   components: { Footer },
@@ -32,6 +33,9 @@ export default {
       )
       return projectJsons.keys().map((x) => projectJsons(x))
     },
+  },
+  head() {
+    return metaTags('Projects', this.$route.fullPath)
   },
 }
 </script>

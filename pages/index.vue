@@ -40,6 +40,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import metaTags from '~/utils/metaTags.js'
 import photos from '~/assets/img-list'
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
@@ -49,7 +50,11 @@ export default Vue.extend({
   data() {
     return {
       photos,
+      title: 'btr.pm',
     }
+  },
+  head() {
+    return metaTags('btr.pm', this.$route.fullPath)
   },
 })
 </script>

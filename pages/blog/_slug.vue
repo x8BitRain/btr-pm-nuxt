@@ -13,6 +13,7 @@
 
 <script>
 import Header from '@/components/Header'
+import metaTags from '@/utils/metaTags.js'
 export default {
   components: { Header },
   async asyncData({ $content, params }) {
@@ -24,6 +25,18 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     },
+  },
+  mounted() {
+    console.log(this.article)
+    console.log(this.$route)
+  },
+  head() {
+    return metaTags(
+      this.article.title,
+      this.$route.fullPath,
+      this.article.description,
+      require('@/assets/img/blog/' + this.article.slug + '/' + this.article.img)
+    )
   },
 }
 </script>

@@ -58,11 +58,15 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import metaTags from '@/utils/metaTags.js'
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 
 export default Vue.extend({
   components: { Footer, Header },
+  head() {
+    return metaTags('Contact', this.$route.fullPath)
+  },
 })
 </script>
 

@@ -3,6 +3,7 @@ title: Building and optimizing a static website from scratch.
 description: An adventure in static pages, layouts, web frameworks, image compression and load times. How I built the site you're on right now.
 img: preview.jpg
 alt: Building and optimizing a static website from scratch.
+label: HTML/CSS/JS
 author: Dashiell Bell
 ---
 

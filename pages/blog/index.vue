@@ -10,7 +10,7 @@
         :image="article.img"
         :date="article.createdAt"
         :link="article.slug"
-        :label="'article.label'"
+        :label="article.label"
         :label-color="'article.labelColor'"
         :index="index"
       />
@@ -19,15 +19,28 @@
   </div>
 </template>
 <script>
+import metaTags from '@/utils/metaTags.js'
+
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author', 'createdAt'])
+      .only([
+        'title',
+        'description',
+        'img',
+        'slug',
+        'author',
+        'createdAt',
+        'label',
+      ])
       .sortBy('createdAt', 'asc')
       .fetch()
     return {
       articles,
     }
+  },
+  head() {
+    return metaTags('Blog', this.$route.fullPath)
   },
 }
 </script>
