@@ -1,5 +1,8 @@
 <template>
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-grids" uk-grid>
+  <div
+    class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-grids"
+    uk-grid
+  >
     <div :class="innerClass">
       <transition name="fade" mode="out-in">
         <img
@@ -10,12 +13,27 @@
           :alt="title"
           uk-cover
         />
+      </transition>
+      <transition name="fade" mode="out-in">
+        <img
+          v-if="placeholderImage"
+          v-show="!hidePlaceholder"
+          id="placeholder-image"
+          :src="require('@/assets/img/projects/' + placeholderImage)"
+          loading="lazy"
+          class="lazyload"
+          :alt="title"
+          uk-cover
+        />
+      </transition>
+      <transition name="fade" mode="out-in">
         <video
           v-if="image.match(/mp4/)"
           autoplay
           muted
           loop
           class="project-video"
+          @playing="hidePlaceholderToggle"
         >
           <source
             :src="require('@/assets/img/projects/' + image)"
@@ -38,7 +56,7 @@
         </h3>
         <p>{{ body }}</p>
         <div v-for="link in links" :key="link.linkText">
-          <a :href="link.link">{{ link.linkText }}</a>
+          <a :href="link.link" target="_blank">{{ link.linkText }}</a>
           <br />
         </div>
       </div>
@@ -82,10 +100,20 @@ export default {
       type: String,
       required: true,
     },
+    placeholderImage: {
+      type: String,
+      required: false,
+      default: '',
+    },
     index: {
       type: Number,
       required: true,
     },
+  },
+  data() {
+    return {
+      hidePlaceholder: false,
+    }
   },
   computed: {
     innerClass() {
@@ -94,6 +122,11 @@ export default {
       } else {
         return 'image-container uk-card-media-left uk-cover-container'
       }
+    },
+  },
+  methods: {
+    hidePlaceholderToggle() {
+      this.hidePlaceholder = true
     },
   },
 }
@@ -110,6 +143,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#placeholder-image {
+  z-index: 1 !important;
 }
 
 .uk-card-default {
