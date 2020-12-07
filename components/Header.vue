@@ -33,6 +33,7 @@
 export default {
   name: 'Header',
   mounted() {
+    console.log(this.$route.path)
     if (this.$route.path.match('projects')) {
       const script = document.createElement('script')
       script.type = 'text/javascript'
