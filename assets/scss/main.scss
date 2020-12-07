@@ -9,3 +9,12 @@
 .fade-leave-to {
   opacity: 0;
 }
+
+.fadeDelay-enter-active,
+.fadeDelay-leave-active {
+  transition: opacity 6s;
+}
+.fadeDelay-enter,
+.fadeDelay-leave-to {
+  opacity: 0;
+}

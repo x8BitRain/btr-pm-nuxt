@@ -10,7 +10,7 @@ const metaTags = (
     title: link === '/' ? 'btr.pm' : title + ' | btr.pm',
     link: [
       { rel: 'favicon', href: 'favicon.ico' },
-      { rel: 'icon', type: 'image/png', href: 'icon.png' },
+      { rel: 'icon', type: 'image/png', href: '/icon.png' },
     ],
     meta: [
       { charset: 'utf-8' },
