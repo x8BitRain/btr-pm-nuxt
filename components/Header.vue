@@ -32,14 +32,6 @@
 <script>
 export default {
   name: 'Header',
-  mounted() {
-    if (this.$route.path.match('projects')) {
-      const script = document.createElement('script')
-      script.type = 'text/javascript'
-      script.src = '/fluid.js'
-      document.body.appendChild(script)
-    }
-  },
   methods: {
     activeLink(linkName) {
       if (this.$route.path === linkName) {
