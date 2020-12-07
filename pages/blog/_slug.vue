@@ -26,10 +26,6 @@ export default {
       return new Date(date).toLocaleDateString('en', options)
     },
   },
-  mounted() {
-    console.log(this.article)
-    console.log(this.$route)
-  },
   head() {
     return metaTags(
       this.article.title,

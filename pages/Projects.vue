@@ -11,6 +11,7 @@
         :body="project.body"
         :links="project.links"
         :image="project.image"
+        :placeholder-image="project.placeholderImage"
         :index="index"
       />
     </main>
