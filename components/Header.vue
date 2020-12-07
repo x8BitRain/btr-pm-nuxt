@@ -3,9 +3,7 @@
     <div
       class="uk-card uk-card-default uk-card-body uk-light uk-animation-fade"
     >
-      <transition name="fadeDelay">
-        <canvas id="fun-canvas"></canvas>
-      </transition>
+      <canvas id="fun-canvas"></canvas>
       <div class="uk-inline">
         <a id="l" href="/"
           ><img
