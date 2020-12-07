@@ -2,7 +2,7 @@
   "title": "thestarposter.com",
   "label": "Vue",
   "labelColor": "#3fba84",
-  "body": "A web based interactive poster editor for mobile and desktop for Heureka Prints with a 3D celestial map that accurately displays the night sky above a given date, time and location. Built in VueJS.",
+  "body": "A web based interactive poster editor for mobile and desktop for Heureka Prints with a 3D celestial map that accurately displays the night sky at a given date, time and location. Built in VueJS.",
   "links": [
     {
       "link": "https://thestarposter.com/",
